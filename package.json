@@ -1,0 +1,10 @@
+{
+  "name": "milky-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Milky Interactive (landing, wordle, downloader, donate). Proxy ke backend bot di node.termai.cc:3510.",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {}
+}

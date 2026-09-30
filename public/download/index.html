@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0118">
+    <title>Milky Interactive · Downloader</title>
+    <link rel="stylesheet" href="/download/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-aurora"></div>
+    <main class="container">
+        <header class="brand-header">
+            <h1>MILKY <span>DOWNLOADER</span></h1>
+            <p>Paste link YouTube, TikTok, Instagram, Facebook, X</p>
+        </header>
+
+        <div class="card">
+            <div class="input-group">
+                <input id="url" type="url" placeholder="https://..." autocomplete="off">
+                <select id="type">
+                    <option value="mp4">Video (MP4)</option>
+                    <option value="mp3">Audio (MP3)</option>
+                </select>
+            </div>
+            <button id="btn">Download</button>
+            <div id="status"></div>
+            <div id="result" class="hidden">
+                <a id="dl" href="#" target="_blank" download>⬇ Download File</a>
+                <p id="info"></p>
+            </div>
+        </div>
+
+        <footer>Milky Interactive · Powered by yt-dlp</footer>
+    </main>
+    <script src="/download/app.js"></script>
+</body>
+</html>

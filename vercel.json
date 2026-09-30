@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/wordle", "destination": "/wordle/index.html" },
+    { "source": "/wordle/id/tutorial", "destination": "/wordle/tutorial.html" },
+    { "source": "/wordle/(id|en)/:uuid", "destination": "/wordle/index.html" },
+    { "source": "/donate", "destination": "/donate/index.html" },
+    { "source": "/download", "destination": "/download/index.html" },
+    { "source": "/api/(.*)", "destination": "/api/proxy.js" }
+  ]
+}
