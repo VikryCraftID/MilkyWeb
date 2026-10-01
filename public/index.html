@@ -2,10 +2,11 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0118">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#06000e">
     <meta name="description" content="Milky Interactive — Bot WhatsApp dengan minigame, downloader, RPG, dan tools.">
     <title>Milky Interactive</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2306000e'/%3E%3Ctext x='50' y='70' font-size='56' text-anchor='middle' fill='%23c084fc' font-family='sans-serif' font-weight='700'%3EM%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="/landing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +14,31 @@
 </head>
 <body>
     <div class="bg-aurora" aria-hidden="true"></div>
+    <div class="bg-grain" aria-hidden="true"></div>
+
+    <nav class="topbar">
+        <a class="navlogo" href="/">Milky</a>
+        <div class="navlinks">
+            <a href="/download">Downloader</a>
+            <a href="/wordle">Wordle</a>
+            <a href="/donate">Donate</a>
+        </div>
+    </nav>
 
     <main class="container">
         <header class="hero">
-            <div class="hero-badge">BOT WHATSAPP</div>
-            <h1>MILKY <span>INTERACTIVE</span></h1>
-            <p class="tagline">Minigame, downloader, RPG, dan tools — langsung dari chat WhatsApp kamu.</p>
-            <div class="hero-actions">
-                <a class="btn primary" href="/download">Downloader</a>
-                <a class="btn" href="/wordle">Wordle</a>
-                <a class="btn" href="/donate">Donate</a>
+            <div class="hero-copy">
+                <div class="hero-badge"><i></i>BOT WHATSAPP</div>
+                <h1>Milky<br><span>Interactive</span></h1>
+                <p class="tagline">Minigame, downloader, RPG, dan tools — langsung dari chat WhatsApp kamu.</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="/download">Buka Downloader</a>
+                    <a class="btn" href="/wordle">Main Wordle</a>
+                </div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="art-glow"></div>
+                <img src="/assets/milky-illust.webp" alt="" width="540" height="374" fetchpriority="high">
             </div>
         </header>
 
@@ -31,13 +47,13 @@
                 <div class="icon">⬇</div>
                 <h2>Downloader</h2>
                 <p>Unduh media dari YouTube, TikTok, Instagram, Facebook, dan X. Pilih MP3 atau MP4.</p>
-                <span class="go">Buka →</span>
+                <span class="go">Buka <i>→</i></span>
             </a>
             <a class="card" href="/wordle">
                 <div class="icon">🔤</div>
                 <h2>Wordle</h2>
                 <p>Tebak kata 5 huruf dalam 6 percobaan. Main di web, hadiah Yen &amp; Exp masuk ke RPG.</p>
-                <span class="go">Main →</span>
+                <span class="go">Main <i>→</i></span>
             </a>
             <div class="card">
                 <div class="icon">🎮</div>
@@ -61,20 +77,24 @@
                 <div class="icon">💜</div>
                 <h2>Donate</h2>
                 <p>Dukung Milky tetap online lewat QRIS. Setiap donasi sangat berarti.</p>
-                <span class="go">Donasi →</span>
+                <span class="go">Donasi <i>→</i></span>
             </a>
         </section>
 
         <section class="how">
             <h2>Cara pakai botnya</h2>
             <ol>
-                <li>Chat <b>Hai</b> sekali ke nomor Milky di private chat.</li>
+                <li><b>Chat <i>Hai</i></b> sekali ke nomor Milky di private chat.</li>
                 <li>Minta owner grup untuk <b>register + setup</b> grup kamu.</li>
                 <li>Ketik <b>.help</b> buat lihat semua perintah.</li>
             </ol>
         </section>
 
-        <footer>Milky Interactive · by CrystalDev</footer>
+        <footer>
+            <span class="foot-logo">Milky Interactive</span>
+            <span class="foot-sep">·</span>
+            <span>by CrystalDev</span>
+        </footer>
     </main>
 </body>
 </html>

@@ -1,38 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0118">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#06000e">
     <title>Milky Interactive · Downloader</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2306000e'/%3E%3Ctext x='50' y='70' font-size='56' text-anchor='middle' fill='%23c084fc' font-family='sans-serif' font-weight='700'%3EM%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="/download/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-aurora"></div>
+    <div class="bg-aurora" aria-hidden="true"></div>
+    <div class="bg-grain" aria-hidden="true"></div>
+
+    <nav class="topbar">
+        <a class="navlogo" href="/">Milky</a>
+        <div class="navlinks">
+            <a href="/download">Downloader</a>
+            <a href="/wordle">Wordle</a>
+            <a href="/donate">Donate</a>
+        </div>
+    </nav>
+
     <main class="container">
-        <header class="brand-header">
-            <h1>MILKY <span>DOWNLOADER</span></h1>
-            <p>Paste link YouTube, TikTok, Instagram, Facebook, X</p>
+        <header class="page-head">
+            <div class="hero-badge"><i></i>DOWNLOADER</div>
+            <h1>Milky <span>Downloader</span></h1>
+            <p>Paste link YouTube, TikTok, Instagram, Facebook, atau X. Pilih format, langsung dapat file-nya.</p>
         </header>
 
         <div class="card">
             <div class="input-group">
-                <input id="url" type="url" placeholder="https://..." autocomplete="off">
-                <select id="type">
-                    <option value="mp4">Video (MP4)</option>
-                    <option value="mp3">Audio (MP3)</option>
+                <input id="url" type="url" placeholder="Paste link di sini..." autocomplete="off" spellcheck="false">
+                <select id="type" aria-label="Format">
+                    <option value="mp4">Video · MP4</option>
+                    <option value="mp3">Audio · MP3</option>
                 </select>
+                <button id="btn">Download</button>
             </div>
-            <button id="btn">Download</button>
-            <div id="status"></div>
-            <div id="result" class="hidden">
-                <a id="dl" href="#" target="_blank" download>⬇ Download File</a>
-                <p id="info"></p>
+            <div id="status" class="status">Siap menerima link.</div>
+            <div id="result" class="result hidden">
+                <div class="result-card">
+                    <a id="dl" class="dl-btn" href="#" target="_blank" download>⬇ Download File</a>
+                    <p id="info"></p>
+                </div>
             </div>
         </div>
 
-        <footer>Milky Interactive · Powered by yt-dlp</footer>
+        <section class="platforms">
+            <span class="plat-label">Didukung</span>
+            <div class="plat-chips">
+                <span>YouTube</span><span>TikTok</span><span>Instagram</span>
+                <span>Facebook</span><span>X / Twitter</span><span>Spotify</span>
+                <span>Reddit</span><span>Pinterest</span><span>SoundCloud</span>
+            </div>
+        </section>
+
+        <footer>
+            <span class="foot-logo">Milky Interactive</span>
+            <span class="foot-sep">·</span>
+            <span>Powered by yt-dlp</span>
+        </footer>
     </main>
     <script src="/download/app.js"></script>
 </body>
