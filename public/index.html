@@ -8,9 +8,6 @@
     <title>Milky Interactive</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2306000e'/%3E%3Ctext x='50' y='70' font-size='56' text-anchor='middle' fill='%23c084fc' font-family='sans-serif' font-weight='700'%3EM%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="/landing.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="bg-aurora" aria-hidden="true"></div>
@@ -46,54 +43,61 @@
             </div>
         </header>
 
-        <section class="grid">
-            <a class="card feat span2" href="/download">
-                <div class="icon">⬇</div>
-                <h2>Downloader</h2>
-                <p>17 platform: YouTube, TikTok, Instagram, Facebook, X, Spotify, Reddit, dan lainnya. MP3 atau MP4, tinggal paste link.</p>
-                <span class="go">Buka sekarang <i>→</i></span>
+        <section class="features">
+            <a class="frow hero-row" href="/download">
+                <div class="frow-icon lg">⬇</div>
+                <div class="frow-body">
+                    <h2>Downloader</h2>
+                    <p>17 platform: YouTube, TikTok, Instagram, Facebook, X, Spotify, dan lainnya. MP3 atau MP4, tinggal paste link.</p>
+                </div>
+                <span class="frow-go">Buka <i>→</i></span>
             </a>
-            <a class="card feat" href="/wordle">
-                <div class="icon">🔤</div>
-                <h2>Wordle</h2>
-                <p>Tebak kata 5 huruf dalam 6 percobaan. Main di web, hadiah Yen &amp; Exp masuk ke RPG.</p>
-                <span class="go">Main <i>→</i></span>
-            </a>
-            <div class="card feat">
-                <div class="icon">🎮</div>
-                <h2>RPG &amp; Gacha</h2>
-                <p>Gacha Guardian Tales, evolusi role, daily reward dengan streak multiplier, leaderboard, dan kartu profil yang bisa di-custom.</p>
-                <span class="go muted">Via WhatsApp</span>
+
+            <div class="frow-split">
+                <a class="frow" href="/wordle">
+                    <div class="frow-icon">🔤</div>
+                    <div class="frow-body">
+                        <h2>Wordle</h2>
+                        <p>Tebak kata 5 huruf, main di web. Hadiah Yen &amp; Exp masuk RPG.</p>
+                    </div>
+                    <span class="frow-go">Main <i>→</i></span>
+                </a>
+                <div class="frow">
+                    <div class="frow-icon">🎮</div>
+                    <div class="frow-body">
+                        <h2>RPG &amp; Gacha</h2>
+                        <p>Gacha Guardian Tales, evolusi role, daily streak, leaderboard.</p>
+                    </div>
+                    <span class="frow-go muted">Via WhatsApp</span>
+                </div>
             </div>
-            <div class="card">
-                <div class="icon">🛡</div>
-                <h2>Group Guard</h2>
-                <p>Anti-link, anti-virtex, anti-toxic, anti-kudeta. Plus admin tools: kick, warn auto-kick, hidetag.</p>
-                <span class="go muted">Via WhatsApp</span>
+
+            <div class="frow-list">
+                <div class="frow compact">
+                    <div class="frow-icon sm">🎨</div>
+                    <div class="frow-body"><h3>Stiker &amp; Meme</h3><p>Stiker dari gambar/video, meme teks atas-bawah, brat, konversi media.</p></div>
+                </div>
+                <div class="frow compact">
+                    <div class="frow-icon sm">🪄</div>
+                    <div class="frow-body"><h3>AI Image Tools</h3><p>Upscale 2× dual-engine, hapus background, edit gambar dari teks.</p></div>
+                </div>
+                <div class="frow compact">
+                    <div class="frow-icon sm">🎵</div>
+                    <div class="frow-body"><h3>Musik &amp; Audio</h3><p>Putar YT/Spotify, autoplay AI + sleep timer, 9 efek audio, lirik.</p></div>
+                </div>
+                <div class="frow compact">
+                    <div class="frow-icon sm">🛡</div>
+                    <div class="frow-body"><h3>Group Guard</h3><p>Anti-link, anti-virtex, anti-toxic, anti-kudeta + admin tools.</p></div>
+                </div>
             </div>
-            <div class="card">
-                <div class="icon">🎨</div>
-                <h2>Stiker &amp; Meme</h2>
-                <p>Bikin stiker dari gambar/video, meme stiker teks atas-bawah, brat stiker, konversi stiker ke media.</p>
-                <span class="go muted">Via WhatsApp</span>
-            </div>
-            <div class="card">
-                <div class="icon">🪄</div>
-                <h2>AI Image Tools</h2>
-                <p>HD-kan foto 2× dual-engine, hapus background jadi transparan, edit gambar dari teks.</p>
-                <span class="go muted">Via WhatsApp</span>
-            </div>
-            <div class="card">
-                <div class="icon">🎵</div>
-                <h2>Musik &amp; Audio</h2>
-                <p>Putar lagu YouTube atau Spotify, autoplay AI + sleep timer, 9 efek audio, dan lirik lagu.</p>
-                <span class="go muted">Via WhatsApp</span>
-            </div>
-            <a class="card span2 donate" href="/donate">
-                <div class="icon">💜</div>
-                <h2>Donate</h2>
-                <p>Dukung Milky tetap online lewat QRIS. Setiap donasi sangat berarti dan membantu server tetap jalan.</p>
-                <span class="go">Donasi <i>→</i></span>
+
+            <a class="frow donate-row" href="/donate">
+                <div class="frow-icon lg">💜</div>
+                <div class="frow-body">
+                    <h2>Donate</h2>
+                    <p>Dukung Milky tetap online lewat QRIS. Setiap donasi sangat berarti.</p>
+                </div>
+                <span class="frow-go">Donasi <i>→</i></span>
             </a>
         </section>
 
