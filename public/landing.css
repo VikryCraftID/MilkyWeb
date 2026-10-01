@@ -181,6 +181,45 @@ body{
 }
 .btn.primary:hover{box-shadow:0 14px 38px -8px rgba(157,92,255,.8),inset 0 1px 0 rgba(255,255,255,.35)}
 
+/* WhatsApp */
+.btn.whatsapp{
+  display:inline-flex;align-items:center;gap:8px;
+  border:none;
+  background:linear-gradient(135deg,#16a34a 0%,#22c55e 60%,#4ade80 100%);
+  color:#fff;
+  box-shadow:0 10px 30px -8px rgba(34,197,94,.6),inset 0 1px 0 rgba(255,255,255,.3);
+}
+.btn.whatsapp:hover{
+  box-shadow:0 14px 38px -8px rgba(34,197,94,.8),inset 0 1px 0 rgba(255,255,255,.35);
+  border-color:transparent;
+}
+.btn.whatsapp svg{flex-shrink:0}
+.btn.whatsapp.lg{padding:15px 32px;font-size:15.5px;border-radius:14px}
+
+/* ============ CTA section ============ */
+.cta{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  position:relative;
+  background:linear-gradient(120deg,rgba(192,132,252,.13),rgba(255,255,255,.03) 55%,rgba(232,121,249,.10));
+  border:1px solid rgba(192,132,252,.28);
+  border-radius:var(--radius);
+  padding:28px 32px;
+  backdrop-filter:blur(20px) saturate(150%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 24px 50px -26px rgba(0,0,0,.8);
+  overflow:hidden;
+}
+.cta::before{
+  content:'';position:absolute;width:280px;height:280px;right:-60px;top:-140px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(192,132,252,.22),transparent 70%);
+  filter:blur(20px);pointer-events:none;
+}
+.cta-copy{position:relative;max-width:520px}
+.cta-copy h2{font-size:22px;font-weight:600;letter-spacing:-.3px;margin-bottom:7px}
+.cta-copy p{font-size:14px;color:var(--muted);line-height:1.6;font-weight:300}
+.cta-copy b{color:var(--text);font-weight:600}
+.cta .btn{position:relative;flex-shrink:0}
+
 /* ============ Hero art (mascot) ============ */
 .hero-art{
   position:relative;
@@ -207,9 +246,10 @@ body{
 /* ============ Feature grid ============ */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
+  grid-template-columns:repeat(4,1fr);
   gap:16px;
 }
+.card.span2{grid-column:span 2}
 
 /* The liquid-glass card */
 .card{
@@ -270,6 +310,17 @@ a.card:active{transform:translateY(-2px) scale(.985)}
   box-shadow:inset 0 1px 0 rgba(255,255,255,.12);
 }
 .card h2{font-size:17px;font-weight:600;margin-bottom:8px;letter-spacing:.1px}
+.card.feat h2{font-size:19px}
+.card.feat .icon{
+  width:52px;height:52px;font-size:26px;border-radius:15px;
+  background:linear-gradient(160deg,rgba(192,132,252,.28),rgba(255,255,255,.03));
+}
+.card.feat p{font-size:14px;max-width:440px}
+.card.donate{
+  background:linear-gradient(160deg,rgba(232,121,249,.13),var(--glass) 60%);
+  border-color:rgba(232,121,249,.25);
+}
+.card.donate:hover{border-color:rgba(232,121,249,.5)}
 .card p{font-size:13.2px;color:var(--muted);line-height:1.62;flex:1}
 .card .go{
   display:inline-flex;align-items:center;gap:6px;
@@ -346,15 +397,20 @@ footer{
   .hero-art{order:-1;min-height:240px}
   .hero-art img{max-width:340px}
   .hero h1{letter-spacing:-1.5px}
+  /* Bento → 2 kolom di tablet */
+  .grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:640px){
   .container{padding:36px 15px 32px;gap:28px}
   .topbar{padding:10px 15px}
   .navlinks a{padding:6px 9px;font-size:12.5px}
+  /* Bento → 1 kolom stack di HP */
   .grid{grid-template-columns:1fr}
+  .card.span2{grid-column:span 1}
   .hero-actions .btn{flex:1}
   .how{padding:20px}
   .tagline{font-size:15px}
+  .cta{flex-direction:column;align-items:stretch;text-align:center}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
