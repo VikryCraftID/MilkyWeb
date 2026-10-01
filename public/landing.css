@@ -207,7 +207,7 @@ body{
 /* ============ Feature grid ============ */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(255px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
   gap:16px;
 }
 
@@ -289,6 +289,8 @@ a.card:hover .go i{transform:translateX(3px)}
 .card:nth-child(4){animation-delay:.24s}
 .card:nth-child(5){animation-delay:.30s}
 .card:nth-child(6){animation-delay:.36s}
+.card:nth-child(7){animation-delay:.42s}
+.card:nth-child(8){animation-delay:.48s}
 
 /* ============ How to use ============ */
 .how{
@@ -318,6 +320,16 @@ a.card:hover .go i{transform:translateX(3px)}
 }
 .how b{color:var(--text);font-weight:600}
 .how i{color:var(--purple);font-style:normal;font-weight:600}
+.how-hint{
+  margin-top:16px;padding-top:16px;border-top:1px solid var(--stroke);
+  font-size:13px;color:var(--muted-2);
+}
+.how-hint a{
+  color:var(--purple);text-decoration:none;font-weight:600;
+  border-bottom:1px solid rgba(192,132,252,.3);
+  transition:color .2s,border-color .2s;
+}
+.how-hint a:hover{color:var(--magenta);border-color:var(--magenta)}
 
 /* ============ Footer ============ */
 footer{
