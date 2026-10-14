@@ -12,7 +12,7 @@ Frontend statis untuk Milky Interactive (WhatsApp bot). Di-deploy ke Vercel.
 
 ```
 Browser  →  milkyinteractive.my.id  →  Vercel (repo ini)
-                                     →  /api/*  →  proxy.js  →  node.termai.cc:3510 (bot Milky)
+                                     →  /api/*  →  proxy.js  →  203.175.125.151:2124 (bot Milky)
 ```
 
 Semua logika (wordle, downloader, database user) ada di backend bot. Repo ini cuma hosting

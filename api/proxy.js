@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   // Langsung teruskan URL beserta /api/...
-  const backendUrl = 'http://node.termai.cc:3510' + req.url;
+  const backendUrl = 'http://203.175.125.151:2124' + req.url;
 
   try {
     const fetchOptions = {
